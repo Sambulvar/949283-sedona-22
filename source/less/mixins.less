@@ -1,0 +1,22 @@
+.font-content(@font-size) when (@font-size > 14px) {
+  font-size: @font-size;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.font-content(@font-size) when (@font-size = 14px) {
+  font-size: @font-size;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.psevdo-svg(@name-svg, @width-svg:10px, @height-svg:10px) {
+  content: "";
+  position: absolute;
+  width: @width-svg;
+  height: @height-svg;
+  background-image: url("../../img/@{name-svg}.svg");
+  background-repeat: no-repeat;
+}
